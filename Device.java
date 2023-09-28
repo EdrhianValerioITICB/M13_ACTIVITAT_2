@@ -8,7 +8,7 @@ public class Device{
         this.brand = brand;
         this.model = model;
         this.basePrice = basePrice;
-        this.finalPrice = finalPrice;
+        this.finalPrice = 2*basePrice;
     }
 
     public String getBrand(){
