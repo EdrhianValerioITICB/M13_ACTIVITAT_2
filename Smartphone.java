@@ -1,16 +1,37 @@
-public class Smartphone {
+public class Smartphone extends Device implements GammaAlta {
     private String os;
     private boolean teAccelometre;
     private boolean teGPS;
 
-    public Smartphone(String os) {
+    public Smartphone(String os, String brand, String model, double basePrice, double finalPrice) {
+        super(brand, model, basePrice, finalPrice);
         this.os = os;
+        this.teAccelometre = false;
+        this.teGPS = true;
+
+        if (this.teAccelometre) {
+            if (this.teGPS) {
+                finalPrice = finalPrice * 1.1 * 1.05;
+            } else {
+                finalPrice = finalPrice * 1.1;
+            }
+        }
     }
 
-    public Smartphone(String os, boolean teAccelometre, boolean teGPS) {
+    public Smartphone(String os, boolean teAccelometre, boolean teGPS, String brand, String model, double basePrice,
+            double finalPrice) {
+        super(brand, model, basePrice, finalPrice);
         this.os = os;
         this.teAccelometre = teAccelometre;
         this.teGPS = teGPS;
+
+        if (this.teAccelometre) {
+            if (this.teGPS) {
+                finalPrice = finalPrice * 1.1 * 1.05;
+            } else {
+                finalPrice = finalPrice * 1.1;
+            }
+        }
     }
 
     // GETTERS
@@ -43,5 +64,13 @@ public class Smartphone {
     public String toString() {
         return super.toString() + "Sistema Operatiu: " + os + ", té accelometre: " + teAccelometre + "té GPS: " + teGPS
                 + ".";
+    }
+
+    @Override
+    public boolean isGammaAlta() {
+        if (this.finalPrice > 700) {
+            return true;
+        }
+        return false;
     }
 }
