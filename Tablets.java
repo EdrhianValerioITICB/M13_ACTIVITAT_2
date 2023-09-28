@@ -1,4 +1,5 @@
 
+
 public class Tablets extends Device implements GammaAlta{
     private double polzades;
     
@@ -32,27 +33,6 @@ public class Tablets extends Device implements GammaAlta{
         
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
