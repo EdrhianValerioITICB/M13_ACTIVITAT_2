@@ -1,5 +1,5 @@
 
-public class Tablets extends Device{
+public class Tablets extends Device implements GammaAlta{
     private double polzades;
     
     public Tablets(double polzades, String brand, String model, double basePrice ,  double finalPrice) {
@@ -20,11 +20,17 @@ public class Tablets extends Device{
         return "Tablet{" + "polzades=" + polzades + '}' + super.toString();
     }
     
-   
-    
-    
+    @Override
+    public boolean isGammaAlta(){
+        if(this.finalPrice > 900){
+            return true;
+        }
+        return false;
 
 
+
+        
+    }
 }
 
 
