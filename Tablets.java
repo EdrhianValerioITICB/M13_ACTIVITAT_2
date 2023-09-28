@@ -27,10 +27,6 @@ public class Tablets extends Device implements GammaAlta{
         }
         return false;
     }
-    
-    
-
-
 }
 
 
