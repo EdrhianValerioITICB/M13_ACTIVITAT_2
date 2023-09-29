@@ -1,4 +1,3 @@
-
 public class Main {
 
     public static void main(String[] args) {
@@ -8,7 +7,7 @@ public class Main {
                 "Apple", "iPhone14", 500, 0);
         Device d4 = new Tablets(10, "Microsoft", "Surface", 400, 0);
 
-        System.out.println(d2);
+        //System.out.println(d2);
 
         Device[] device = { d2, d3, d4 };
         for (Device d : device) {
@@ -16,6 +15,5 @@ public class Main {
                 System.out.println(d);
             }
         }
-
     }
 }
