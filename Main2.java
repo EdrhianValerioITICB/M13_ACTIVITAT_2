@@ -13,6 +13,10 @@ public class Main2 {
                 devices.add(new Altres("Game Console", "Sonny", "Play Station", 250, 0));
 
                 for (Device d : devices) {
+                        System.out.println(d);
+                }
+                System.out.println("Dispositius de gamma alta" + "\n");
+                for (Device d : devices) {
                         if (d instanceof GammaAlta && ((GammaAlta) d).isGammaAlta()) {
                                 System.out.println(d);
                                 System.out.println("\n");
