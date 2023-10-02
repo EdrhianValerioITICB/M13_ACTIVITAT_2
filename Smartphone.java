@@ -62,7 +62,8 @@ public class Smartphone extends Device implements GammaAlta {
 
     @Override
     public String toString() {
-        return super.toString() + "Sistema Operatiu: " + os + ", té accelometre: " + teAccelometre + "té GPS: " + teGPS
+        return super.toString() + "Sistema Operatiu: " + os + ", té accelometre: " + teAccelometre + ", té GPS: "
+                + teGPS
                 + ".";
     }
 
